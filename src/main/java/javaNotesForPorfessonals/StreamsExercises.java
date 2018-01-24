@@ -97,7 +97,6 @@ public class StreamsExercises {
         .stream(s.split("")) // Convert to an array
         .mapToInt(Integer::parseInt)  // Convert to Integers
         .sum(); // Sum
-
     System.out.println(sum);
 
   }
