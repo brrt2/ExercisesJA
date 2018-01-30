@@ -2,6 +2,7 @@ package genericshorstmann;
 
 public class ArrayAlg {
 
+
   public static <T extends Comparable> Pair<T> minmax(T[] a) {
     if (a == null || a.length == 0) {
       return null;
