@@ -71,5 +71,5 @@ public class StackTest {
     assertThat(stack.isEmpty()).isFalse();
 
   }
-  
+
 }

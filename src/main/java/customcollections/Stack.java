@@ -8,30 +8,36 @@ public class Stack {
   private int stackSize;
   private int stackTop;
 
-  Stack (int stackSize) {
+  Stack(int stackSize) {
     stackArray = new String[stackSize];
     this.stackSize = stackSize;
-    Arrays.fill(stackArray,"empty");
+    Arrays.fill(stackArray, "empty");
     stackTop = -1;
   }
 
   void push(String element) {
 
-    if(stackTop < stackSize-1){
+    if (stackTop < stackSize - 1) {
       stackTop++;
       stackArray[stackTop] = element;
+    } else {
+      throw new IllegalStateException("Stack is full");
     }
-    else throw new IllegalStateException("Stack is full");
   }
 
   String peek() {
 
-    if(stackTop == -1) throw new IllegalStateException("Stack is empty");
-    else return stackArray[stackTop];
+    if (stackTop == -1) {
+      throw new IllegalStateException("Stack is empty");
+    } else {
+      return stackArray[stackTop];
+    }
   }
 
   String pop() {
-    if(stackTop == -1) throw new IllegalStateException("Stack is empty");
+    if (stackTop == -1) {
+      throw new IllegalStateException("Stack is empty");
+    }
     String elementToReturn = stackArray[stackTop];
     stackTop--;
     return elementToReturn;
@@ -42,16 +48,4 @@ public class Stack {
   }
 
 
-
-  public String[] getStackArray() {
-    return stackArray;
-  }
-
-  public int getStackSize() {
-    return stackSize;
-  }
-
-  public int getStackTop() {
-    return stackTop;
-  }
 }
