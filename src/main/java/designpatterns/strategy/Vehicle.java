@@ -7,7 +7,6 @@ public class Vehicle {
 
     Move move;
 
-
     public String tryToMove() {
       return move.goForward();
     }
