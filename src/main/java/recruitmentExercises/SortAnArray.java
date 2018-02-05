@@ -51,7 +51,6 @@ public class SortAnArray {
       arrayToSort[x] = arrayToSort[minimum];
       arrayToSort[minimum] = temp;
     }
-
     return arrayToSort;
   }
 
@@ -68,14 +67,13 @@ public class SortAnArray {
         arrayToSort[j] = arrayToSort[j+1];
         arrayToSort[j+1] = temp;
       }
-
     }
 
     return arrayToSort;
   }
 
 
-  
+
 
 
 

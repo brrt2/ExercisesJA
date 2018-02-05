@@ -1,5 +1,7 @@
 package recruitmentExercises;
 
+import java.util.stream.Stream;
+
 public class ReverseString {
 
   public static void main(String[] args) {
@@ -11,5 +13,7 @@ public class ReverseString {
 
     return new StringBuilder(word).reverse().toString();
   }
+
+
 
 }
