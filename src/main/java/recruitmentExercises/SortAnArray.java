@@ -12,11 +12,12 @@ public class SortAnArray {
     System.out.println(Arrays.toString(sortedArray));
 
 
-    int[] sortedArray1 = sortWithSelectionSort(arrayToSort);
+    int[] sortedArray1 = selfmadeselectionsort(arrayToSort);
     System.out.println(Arrays.toString(sortedArray1));
 
     int[] sortedArray2 = sortWithInsertionSort(arrayToSort);
     System.out.println(Arrays.toString(sortedArray2));
+
 
   }
 
@@ -35,14 +36,14 @@ public class SortAnArray {
   }
 
 
-  private static int[] sortWithSelectionSort(int[] arrayToSort){
+  private static int[] sortWithSelectionSort(int[] arrayToSort) {
 
-    for(int x=0; x < arrayToSort.length; x++){
+    for (int x = 0; x < arrayToSort.length; x++) {
       int minimum = x;
 
-      for(int y=x; y < arrayToSort.length; y++){
+      for (int y = x; y < arrayToSort.length; y++) {
 
-        if(arrayToSort[minimum] > arrayToSort[y]){
+        if (arrayToSort[minimum] > arrayToSort[y]) {
           minimum = y;
         }
       }
@@ -57,16 +58,16 @@ public class SortAnArray {
 
   private static int[] sortWithInsertionSort(int[] arrayToSort) {
 
-    int j,key;
+    int j, key;
 
     for (int i = 1; i < arrayToSort.length; i++) {
-    key = arrayToSort[i];
-    j = i-1;
+      key = arrayToSort[i];
+      j = i - 1;
 
-      while(j >= 0 && key < arrayToSort[j]) {
+      while (j >= 0 && key < arrayToSort[j]) {
         int temp = arrayToSort[j];
-        arrayToSort[j] = arrayToSort[j+1];
-        arrayToSort[j+1] = temp;
+        arrayToSort[j] = arrayToSort[j + 1];
+        arrayToSort[j + 1] = temp;
       }
 
     }
@@ -74,11 +75,25 @@ public class SortAnArray {
     return arrayToSort;
   }
 
+  private static int[] selfmadeselectionsort(int[] arrayToSort) {
 
-  
+    for (int i = 0; i < arrayToSort.length; i++) {
 
+      int min = i;
 
+      for (int j = i; j < arrayToSort.length; j++) {
 
+        if (arrayToSort[min] > arrayToSort[j]) min = arrayToSort[j];
+
+      }
+      int temp = arrayToSort[i];
+      arrayToSort[i] = arrayToSort[min];
+      arrayToSort[min] = temp;
+
+    }
+    return arrayToSort;
+
+  }
 
 
 }
