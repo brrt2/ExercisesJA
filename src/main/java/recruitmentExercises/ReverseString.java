@@ -15,5 +15,21 @@ public class ReverseString {
   }
 
 
+//  private String reverseStringNoReverseMethod(String word) {
+//
+//    char[] stringAsTable = new char[word.length()];
+//
+//    for(char c : stringAsTable) {
+//
+//    }
+//
+//    for (int i = 0; i < word.length()/2 ; i++) {
+//      char temp = word.charAt(i);
+//
+//    }
+//
+//  }
+
+
 
 }

@@ -2,9 +2,9 @@ package recruitmentExercises;
 
 public class MyStack {
 
-  String[] stackArray;
-  int size;
-  int stackTop;
+  private String[] stackArray;
+  private int size;
+  private int stackTop;
 
 
   public MyStack(int size) {
@@ -14,10 +14,8 @@ public class MyStack {
   }
 
   public void push(String element) {
-
     if (stackTop == size - 1) throw new IllegalStateException("Stack is full");
     stackArray[++stackTop] = element;
-
   }
 
   public String peek() {
